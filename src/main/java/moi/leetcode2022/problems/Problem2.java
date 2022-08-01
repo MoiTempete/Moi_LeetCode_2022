@@ -1,5 +1,7 @@
 package moi.leetcode2022.problems;
 
+import moi.leetcode2022.structure.ListNode;
+
 /**
  * 2. Add Two Numbers
  * Medium
@@ -63,20 +65,4 @@ public class Problem2 {
         return sumNode;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
