@@ -54,36 +54,35 @@ public class Problem5 {
         if (referenceIndexes.size() == 1) {
             return s;
         }
+        ArrayList<Integer> references;
         String longestResult = "";
-        String current = "";
+        String currentResult;
 
         for (Map.Entry<String, ArrayList<Integer>> entry : referenceIndexes.entrySet()) {
-            current = getPalindromicString(bytes, entry);
-            if (current.length() > longestResult.length()) {
-                longestResult = current;
-            }
-        }
-
-        return longestResult.length() == 0 ? String.valueOf(s.charAt(0)) : longestResult;
-    }
-
-    public static String getPalindromicString(char[] bytes, Map.Entry<String, ArrayList<Integer>> entry) {
-        ArrayList<Integer> references;
-        references = entry.getValue();
-        int size = references.size();
-        String result;
-        if (size > 1) {
-            for (int i = 0; i <= references.size() / 2; i++) {
-                for (int j = references.size() - 1; j >= references.size() / 2; j--) {
-                    if (isPalindromic(bytes, references.get(i), references.get(j))) {
-                        result = String.valueOf(Arrays.copyOfRange(bytes, references.get(i), references.get(j)));
-                        result = result + entry.getKey();
-                        return result;
+            references = entry.getValue();
+            if (references.size() > 1) {
+                for (int i = 0; i < references.size(); i++) {
+                    for (int j = references.size() - 1; j >= i + 1; j--) {
+                        int start = references.get(i);
+                        int end = references.get(j);
+                        if ((end - start + 1) < longestResult.length()) {
+//                            Logger.i("start=" + i + ", end=" + j + ", longestResult=" + longestResult);
+                            break;
+                        }
+                        if (isPalindromic(bytes, start, end)) {
+                            currentResult = String.valueOf(Arrays.copyOfRange(bytes, start, end));
+                            currentResult = currentResult + entry.getKey();
+//                            Logger.i("start=" + start + ", end=" + end + ", currentResult=" + currentResult);
+                            if (currentResult.length() > longestResult.length()) {
+                                longestResult = currentResult;
+                            }
+                        }
                     }
                 }
             }
         }
-        return "";
+
+        return longestResult.length() == 0 ? String.valueOf(s.charAt(0)) : longestResult;
     }
 
     public static boolean isPalindromic(char[] s, int start, int end) {
@@ -127,24 +126,22 @@ public class Problem5 {
         cases.put("ac", new String[]{"a"});
         cases.put("bacabab", new String[]{"bacab"});
         cases.put("aacabdkacaa", new String[]{"aca"});
-        cases.put("1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
-                new String[]{"1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"});
+        cases.put("xaabacxcabaaxcabaax", new String[]{"xaabacxcabaax"});
 
         for (Map.Entry<String, String[]> entry : cases.entrySet()) {
             String input = entry.getKey();
             String[] expects = entry.getValue();
-            Logger.i("input=" + input);
             String output = longestPalindrome(input);
             int equalsCount = 0;
             for (String expect : expects) {
                 if (output.equals(expect)) {
                     equalsCount++;
-                    Logger.i("case pass by output=" + output);
+                    Logger.i("case pass by input=" + input + ", output=" + output);
                     break;
                 }
             }
             if (equalsCount == 0) {
-                throw new AssertionError("case fail by output=" + output + ", but expect=" + Arrays.toString(expects));
+                throw new AssertionError("case fail by input=" + input + ", output=" + output + ", but expect=" + Arrays.toString(expects));
             }
         }
         Logger.i("All Pass");
