@@ -1,7 +1,10 @@
 package moi.leetcode2022.problems;
 
 import moi.leetcode2022.structure.ListNode;
+import moi.leetcode2022.utils.ListNodeUtil;
 import moi.leetcode2022.utils.Logger;
+
+import java.util.*;
 
 /**
  * 23. Merge k Sorted Lists
@@ -114,26 +117,24 @@ public class Problem23 {
     }
 
     public static void test() {
-        ListNode[] cases;
-        ListNode list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
-        ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-        ListNode list3 = new ListNode(2, new ListNode(6));
-        cases = new ListNode[]{list1, list2, list3};
-//
-//        mergeKLists(new ListNode[]{new ListNode(), new ListNode()});
+        Map<List<int[]>, int[]> cases = new HashMap<>();
+        cases.put(null, null);
+        cases.put(new ArrayList<>(), new int[]{});
+        cases.put(Arrays.asList(new int[]{1, 2}, new int[]{0}), new int[]{0, 1, 2});
+        cases.put(Arrays.asList(new int[]{1, 4, 5}, new int[]{0, 2}), new int[]{0, 1, 2, 4, 5});
+        cases.put(Arrays.asList(new int[]{1, 4, 5}, new int[]{1, 3, 4}, new int[]{2, 6}), new int[]{1, 1, 2, 3, 4, 4, 5, 6});
 
-
-//        ListNode list1 = new ListNode(1, new ListNode(4, new ListNode(5)));
-//        ListNode list2 = new ListNode(0, new ListNode(2));
-
-//        ListNode list1 = new ListNode(1, new ListNode(2));
-//        ListNode list2 = new ListNode(0);
-//        cases = new ListNode[]{list1, list2};
-
-        for (ListNode list : cases) {
-            Logger.i(list.toString());
+        for (Map.Entry<List<int[]>, int[]> entry : cases.entrySet()) {
+            ListNode[] input = ListNodeUtil.toListNodeArray(entry.getKey());
+            ListNode expect = ListNodeUtil.toListNode(entry.getValue());
+            Logger.i("input=" + Arrays.toString(input));
+            ListNode output = mergeKLists(input);
+            if (ListNodeUtil.isEqual(output, expect)) {
+                Logger.i("case pass by output=" + output);
+            } else {
+                throw new AssertionError("case fail by output=" + output + ", but expect=" + expect);
+            }
         }
-        mergeKLists(cases);
-        Logger.i(result == null ? "" : result.toString());
+        Logger.i("All Pass");
     }
 }
