@@ -1,10 +1,9 @@
 package moi.leetcode2022.problems;
 
-import moi.leetcode2022.structure.ListNode;
-import moi.leetcode2022.utils.ListNodeUtil;
 import moi.leetcode2022.utils.Logger;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 3. Longest Substring Without Repeating Characters
