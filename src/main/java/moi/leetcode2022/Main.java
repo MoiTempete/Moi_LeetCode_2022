@@ -1,11 +1,9 @@
 package moi.leetcode2022;
 
-import moi.leetcode2022.problems.Problem23;
-import moi.leetcode2022.utils.ListNodeUtil;
-import moi.leetcode2022.utils.Logger;
+import moi.leetcode2022.problems.Problem3;
 
 public class Main {
     public static void main(String[] args) {
-        Problem23.test();
+        Problem3.test();
     }
 }
