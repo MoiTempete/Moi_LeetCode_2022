@@ -51,7 +51,7 @@ import moi.leetcode2022.utils.Logger;
  * lists[i] is sorted in ascending order.
  * The sum of lists[i].length will not exceed 10^4.
  */
-public class Problem3 {
+public class Problem23 {
 
     static ListNode result;
     static ListNode node;
