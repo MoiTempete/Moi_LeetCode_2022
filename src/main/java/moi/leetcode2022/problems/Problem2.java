@@ -1,6 +1,10 @@
 package moi.leetcode2022.problems;
 
 import moi.leetcode2022.structure.ListNode;
+import moi.leetcode2022.utils.ListNodeUtil;
+import moi.leetcode2022.utils.Logger;
+
+import java.util.*;
 
 /**
  * 2. Add Two Numbers
@@ -47,11 +51,11 @@ import moi.leetcode2022.structure.ListNode;
  */
 public class Problem2 {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return addTwoNumbers(l1, l2, 0);
     }
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2, int carry) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2, int carry) {
         if (l1 == null && l2 == null) {
             return carry == 0 ? null : new ListNode(carry);
         }
@@ -63,6 +67,28 @@ public class Problem2 {
         sumNode.next = addTwoNumbers(l1 == null ? null : l1.next, l2 == null ? null : l2.next, nextCarry);
 
         return sumNode;
+    }
+
+    public static void test() {
+        Map<List<int[]>, int[]> cases = new HashMap<>();
+        cases.put(Arrays.asList(new int[]{2, 4, 3}, new int[]{5, 6, 4}), new int[]{7, 0, 8});
+        cases.put(Arrays.asList(new int[]{0}, new int[]{0}), new int[]{0});
+        cases.put(Arrays.asList(new int[]{9,9,9,9,9,9,9}, new int[]{9,9,9,9}), new int[]{8,9,9,9,0,0,0,1});
+
+        for (Map.Entry<List<int[]>, int[]> entry : cases.entrySet()) {
+            ListNode input1 = ListNodeUtil.toListNode(entry.getKey().get(0));
+            ListNode input2 = ListNodeUtil.toListNode(entry.getKey().get(1));
+            ListNode expect = ListNodeUtil.toListNode(entry.getValue());
+            Logger.i("input1=" + input1);
+            Logger.i("input2=" + input2);
+            ListNode output = addTwoNumbers(input1, input2);
+            if (ListNodeUtil.isEqual(output, expect)) {
+                Logger.i("case pass by output=" + output);
+            } else {
+                throw new AssertionError("case fail by output=" + output + ", but expect=" + expect);
+            }
+        }
+        Logger.i("All Pass");
     }
 
 }
