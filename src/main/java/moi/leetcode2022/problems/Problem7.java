@@ -1,12 +1,8 @@
 package moi.leetcode2022.problems;
 
-import moi.leetcode2022.structure.ListNode;
-import moi.leetcode2022.utils.ListNodeUtil;
 import moi.leetcode2022.utils.Logger;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,17 +45,16 @@ public class Problem7 {
     public static int reverse(int x) {
         int result = 0;
         int temp;
-
         for (int i = 0; i < Integer.MAX_VALUE; i++) {
             if (x == 0) {
                 break;
             }
             temp = x % 10;
             x = x / 10;
-            if (result > Integer.MAX_VALUE/10 || (result == Integer.MAX_VALUE / 10 && temp > 7)) {
+            if (result > Integer.MAX_VALUE / 10 || (result == Integer.MAX_VALUE / 10 && temp > 7)) {
                 return 0;
             }
-            if (result < Integer.MIN_VALUE/10 || (result == Integer.MIN_VALUE / 10 && temp < -8)) {
+            if (result < Integer.MIN_VALUE / 10 || (result == Integer.MIN_VALUE / 10 && temp < -8)) {
                 return 0;
             }
             result = result * 10 + temp;
