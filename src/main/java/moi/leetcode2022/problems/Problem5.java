@@ -2,10 +2,7 @@ package moi.leetcode2022.problems;
 
 import moi.leetcode2022.utils.Logger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /*
 5. Longest Palindromic Substring
@@ -49,14 +46,19 @@ public class Problem5 {
         }
 
         char[] bytes = s.toCharArray();
-        Map<String, ArrayList<Integer>> referenceIndexes = getReferenceIndexes(s);
-//        Logger.i("input=" + "s" + ", referenceIndexes=" + referenceIndexes);
+        HashMap<String, ArrayList<Integer>> referenceIndexes = getReferenceIndexes(s);
+//        Logger.i("input=" + s + "\nreferenceIndexes=" + referenceIndexes);
         if (referenceIndexes.size() == 1) {
             return s;
         }
         ArrayList<Integer> references;
         String longestResult = "";
         String currentResult;
+
+        if (referenceIndexes.size() > 2) {
+            referenceIndexes = sortByValue(referenceIndexes);
+//            Logger.i("sorted referenceIndexes=" + referenceIndexes);
+        }
 
         for (Map.Entry<String, ArrayList<Integer>> entry : referenceIndexes.entrySet()) {
             references = entry.getValue();
@@ -65,17 +67,13 @@ public class Problem5 {
                     for (int j = references.size() - 1; j >= i + 1; j--) {
                         int start = references.get(i);
                         int end = references.get(j);
-                        if ((end - start + 1) < longestResult.length()) {
-//                            Logger.i("start=" + i + ", end=" + j + ", longestResult=" + longestResult);
+                        if ((end - start + 1) <= longestResult.length()) {
                             break;
                         }
                         if (isPalindromic(bytes, start, end)) {
-                            currentResult = String.valueOf(Arrays.copyOfRange(bytes, start, end));
-                            currentResult = currentResult + entry.getKey();
+                            currentResult = String.valueOf(Arrays.copyOfRange(bytes, start, end)) + entry.getKey();
 //                            Logger.i("start=" + start + ", end=" + end + ", currentResult=" + currentResult);
-                            if (currentResult.length() > longestResult.length()) {
-                                longestResult = currentResult;
-                            }
+                            longestResult = currentResult;
                         }
                     }
                 }
@@ -98,8 +96,8 @@ public class Problem5 {
         return true;
     }
 
-    public static Map<String, ArrayList<Integer>> getReferenceIndexes(String s) {
-        Map<String, ArrayList<Integer>> referenceIndexes = new HashMap<>();
+    public static HashMap<String, ArrayList<Integer>> getReferenceIndexes(String s) {
+        HashMap<String, ArrayList<Integer>> referenceIndexes = new HashMap<>();
         String element;
         ArrayList<Integer> elementIndexes;
 
@@ -117,6 +115,21 @@ public class Problem5 {
         }
         return referenceIndexes;
     }
+
+    public static HashMap<String, ArrayList<Integer>> sortByValue(HashMap<String, ArrayList<Integer>> hm) {
+        List<Map.Entry<String, ArrayList<Integer>>> list = new LinkedList<>(hm.entrySet());
+
+        list.sort((o1, o2) -> (
+                (o2.getValue().get(o2.getValue().size() - 1) - o2.getValue().get(0)) -
+                        (o1.getValue().get(o1.getValue().size() - 1) - o1.getValue().get(0))));
+
+        HashMap<String, ArrayList<Integer>> temp = new LinkedHashMap<>();
+        for (Map.Entry<String, ArrayList<Integer>> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        return temp;
+    }
+
 
     public static void test() {
         Map<String, String[]> cases = new HashMap<>();
@@ -141,7 +154,8 @@ public class Problem5 {
                 }
             }
             if (equalsCount == 0) {
-                throw new AssertionError("case fail by input=" + input + ", output=" + output + ", but expect=" + Arrays.toString(expects));
+                throw new AssertionError("case fail by input=" + input +
+                        ", output=" + output + ", but expect=" + Arrays.toString(expects));
             }
         }
         Logger.i("All Pass");
