@@ -78,38 +78,11 @@ public class Problem13 {
         while (i < s.length()) {
             temp = String.valueOf(s.charAt(i));
             switch (temp) {
-                case "I" -> {
+                case "I", "X", "C" -> {
                     if (i + 1 < s.length()) {
                         temp2 = String.valueOf(s.charAt(i + 1));
-                        if ("X".equals(temp2) || "V".equals(temp2)) {
-                            temp += temp2;
-                            result += Roman.valueOf(temp).getValue();
-                            i += 2;
-                            break;
-                        }
-                    }
-                    result += Roman.valueOf(temp).getValue();
-                    i++;
-                }
-                case "X" -> {
-                    if (i + 1 < s.length()) {
-                        temp2 = String.valueOf(s.charAt(i + 1));
-                        if ("L".equals(temp2) || "C".equals(temp2)) {
-                            temp += temp2;
-                            result += Roman.valueOf(temp).getValue();
-                            i += 2;
-                            break;
-                        }
-                    }
-                    result += Roman.valueOf(temp).getValue();
-                    i++;
-                }
-                case "C" -> {
-                    if (i + 1 < s.length()) {
-                        temp2 = String.valueOf(s.charAt(i + 1));
-                        if ("D".equals(temp2) || "M".equals(temp2)) {
-                            temp += temp2;
-                            result += Roman.valueOf(temp).getValue();
+                        if (Roman.isRoman(temp + temp2)) {
+                            result += Roman.valueOf(temp + temp2).getValue();
                             i += 2;
                             break;
                         }
@@ -159,6 +132,10 @@ public class Problem13 {
         public int getValue() {
             return value;
         }
+
+        public static boolean isRoman(String s) {
+            return "IV IX XL XC CD CM".contains(s);
+        }
     }
 
     public static void test() {
@@ -168,6 +145,7 @@ public class Problem13 {
         cases.put("III", 3);
         cases.put("LVIII", 58);
         cases.put("MCMXCIV", 1994);
+        cases.put("DCXXI", 621);
 
         for (Map.Entry<String, Integer> entry : cases.entrySet()) {
             String input = entry.getKey();
