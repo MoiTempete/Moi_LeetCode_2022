@@ -139,8 +139,6 @@ public class Problem13 {
     }
 
     public static void test() {
-
-
         Map<String, Integer> cases = new HashMap<>();
         cases.put("III", 3);
         cases.put("LVIII", 58);
