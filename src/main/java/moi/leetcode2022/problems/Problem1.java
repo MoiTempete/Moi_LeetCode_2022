@@ -4,6 +4,7 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -55,18 +56,13 @@ public class Problem1 {
         if (nums == null || nums.length <= 0) {
             return null;
         }
-        List<Integer> tempNums = new ArrayList<>();
-        int tempIndex;
-        int num;
+        HashMap<Integer, Integer> checked = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
-            num = nums[i];
-            if (tempNums.size() > 0) {
-                tempIndex = tempNums.indexOf(num);
-                if (tempIndex >= 0) {
-                    return new int[]{tempIndex, i};
-                }
+            if (checked.get(target - nums[i]) != null) {
+                return new int[]{i, checked.get(target - nums[i])};
+            } else {
+                checked.put(nums[i], i);
             }
-            tempNums.add(i, target - num);
         }
 
         return null;
