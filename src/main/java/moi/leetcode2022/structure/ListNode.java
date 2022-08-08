@@ -24,4 +24,5 @@ public class ListNode {
     private String nextToString() {
         return val + (next != null ? ("," + next.nextToString()) : "]");
     }
+
 }
