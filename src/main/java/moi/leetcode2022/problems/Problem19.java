@@ -100,11 +100,11 @@ public class Problem19 {
             Case input = entry.getKey();
             ListNode expect = ListNodeUtil.toListNode(entry.getValue());
             ListNode output = removeNthFromEnd(input.head, input.n);
+            Logger.i("input=" + input + ", except=" + expect);
             if (ListNodeUtil.isEqual(output, expect)) {
-                Logger.i("case pass by input=" + input + ", output=" + output);
+                Logger.i("case pass by output=" + output);
             } else {
-                throw new AssertionError("case fail by input=" + input +
-                        ", output=" + output + ", but expect=" + expect);
+                throw new AssertionError("case fail by:" + "\ninput=" + input + ", expect=" + expect + ", but output=" + output);
             }
         }
         Logger.i("All Pass");
