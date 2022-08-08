@@ -40,7 +40,7 @@ import java.util.Map;
  * <p>
  * -2^31 <= x <= 2^31 - 1
  */
-public class Problem7 {
+public class Problem7_ReverseInteger {
 
     public static int reverse(int x) {
         int result = 0;

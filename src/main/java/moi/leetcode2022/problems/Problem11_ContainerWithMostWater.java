@@ -43,7 +43,7 @@ n == height.length
 2 <= n <= 10^5
 0 <= height[i] <= 10^4
  */
-public class Problem11 {
+public class Problem11_ContainerWithMostWater {
 
     public static int maxArea(int[] height) {
         if (height == null || height.length == 0) {

@@ -4,7 +4,6 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /*
@@ -51,7 +50,7 @@ s contains only lowercase English letters.
 p contains only lowercase English letters, '.', and '*'.
 It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
  */
-public class Problem10 {
+public class Problem10_RegularExpressionMatching {
 
     public static boolean isMatch(String s, String p) {
         return s.matches(p);

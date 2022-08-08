@@ -2,9 +2,6 @@ package moi.leetcode2022.problems;
 
 import moi.leetcode2022.utils.Logger;
 
-import java.io.ByteArrayInputStream;
-import java.io.PushbackInputStream;
-import java.io.PushbackReader;
 import java.util.*;
 
 /*
@@ -33,7 +30,7 @@ Constraints:
 0 <= digits.length <= 4
 digits[i] is a digit in the range ['2', '9'].
  */
-public class Problem17 {
+public class Problem17_LetterCombinationsOfPhoneNumber {
 
     static HashMap<Character, String[]> letters = new HashMap<>() {
         {

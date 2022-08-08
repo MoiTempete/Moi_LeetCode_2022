@@ -5,8 +5,6 @@ import moi.leetcode2022.utils.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-import static moi.leetcode2022.problems.Problem13.Roman.I;
-
 /*
 13. Roman to Integer
 Easy
@@ -62,7 +60,7 @@ Constraints:
 s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999].
  */
-public class Problem13 {
+public class Problem13_RomanToInteger {
 
     public static int romanToInt(String s) {
         if (s == null || s.length() == 0) {

@@ -6,59 +6,54 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-/**
- * 23. Merge k Sorted Lists
- * Hard
- * <p>
- * 13271
- * <p>
- * 509
- * <p>
- * Add to List
- * <p>
- * Share
- * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
- * <p>
- * Merge all the linked-lists into one sorted linked-list and return it.
- * <p>
- * <p>
- * <p>
- * Example 1:
- * <p>
- * Input: lists = [[1,4,5],[1,3,4],[2,6]]
- * Output: [1,1,2,3,4,4,5,6]
- * Explanation: The linked-lists are:
- * [
- * 1->4->5,
- * 1->3->4,
- * 2->6
- * ]
- * merging them into one sorted list:
- * 1->1->2->3->4->4->5->6
- * Example 2:
- * <p>
- * Input: lists = []
- * Output: []
- * Example 3:
- * <p>
- * Input: lists = [[]]
- * Output: []
- * <p>
- * <p>
- * Constraints:
- * <p>
- * k == lists.length
- * 0 <= k <= 10^4
- * 0 <= lists[i].length <= 500
- * -10^4 <= lists[i][j] <= 10^4
- * lists[i] is sorted in ascending order.
- * The sum of lists[i].length will not exceed 10^4.
+/*
+21. Merge Two Sorted Lists
+Easy
+
+13920
+
+1251
+
+Add to List
+
+Share
+You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists in a one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+
+
+Example 1:
+Input: list1 = [1,2,4], list2 = [1,3,4]
+Output: [1,1,2,3,4,4]
+
+Example 2:
+Input: list1 = [], list2 = []
+Output: []
+
+Example 3:
+Input: list1 = [], list2 = [0]
+Output: [0]
+
+Constraints:
+
+The number of nodes in both lists is in the range [0, 50].
+-100 <= Node.val <= 100
+Both list1 and list2 are sorted in non-decreasing order.
  */
-public class Problem23 {
+public class Problem21_MergeTwoSortedLists {
 
     static ListNode result;
     static ListNode node;
     static ListNode temp;
+
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if (list1 == null && list2 == null) {
+            return null;
+        }
+        return mergeKLists(new ListNode[]{list1, list2});
+    }
 
     public static ListNode mergeKLists(ListNode[] lists) {
         result = null;
@@ -118,17 +113,14 @@ public class Problem23 {
 
     public static void test() {
         Map<List<int[]>, int[]> cases = new HashMap<>();
-        cases.put(null, null);
-        cases.put(new ArrayList<>(), new int[]{});
-        cases.put(Arrays.asList(new int[]{1, 2}, new int[]{0}), new int[]{0, 1, 2});
+        cases.put(Arrays.asList(new int[]{1, 2, 4}, new int[]{1, 3, 4}), new int[]{1,1,2,3,4,4});
         cases.put(Arrays.asList(new int[]{1, 4, 5}, new int[]{0, 2}), new int[]{0, 1, 2, 4, 5});
-        cases.put(Arrays.asList(new int[]{1, 4, 5}, new int[]{1, 3, 4}, new int[]{2, 6}), new int[]{1, 1, 2, 3, 4, 4, 5, 6});
 
         for (Map.Entry<List<int[]>, int[]> entry : cases.entrySet()) {
             ListNode[] input = ListNodeUtil.toListNodeArray(entry.getKey());
             ListNode expect = ListNodeUtil.toListNode(entry.getValue());
             Logger.i("input=" + Arrays.toString(input));
-            ListNode output = mergeKLists(input);
+            ListNode output = mergeTwoLists(input[0], input[1]);
             if (ListNodeUtil.isEqual(output, expect)) {
                 Logger.i("case pass by output=" + output);
             } else {

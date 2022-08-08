@@ -49,7 +49,7 @@ import java.util.*;
  * Submissions
  * 7,554,462
  */
-public class Problem2 {
+public class Problem2_AddTwoNumbers {
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return addTwoNumbers(l1, l2, 0);

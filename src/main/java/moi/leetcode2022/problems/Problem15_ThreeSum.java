@@ -3,7 +3,6 @@ package moi.leetcode2022.problems;
 import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /*
 15. 3Sum
@@ -49,7 +48,7 @@ Constraints:
 3 <= nums.length <= 3000
 -10^5 <= nums[i] <= 10^5
  */
-public class Problem15 {
+public class Problem15_ThreeSum {
 
     static int max = 0;
 

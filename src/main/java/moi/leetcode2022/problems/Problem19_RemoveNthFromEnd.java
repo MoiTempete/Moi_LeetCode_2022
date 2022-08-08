@@ -4,8 +4,6 @@ import moi.leetcode2022.structure.ListNode;
 import moi.leetcode2022.utils.ListNodeUtil;
 import moi.leetcode2022.utils.Logger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,7 +45,7 @@ The number of nodes in the list is sz.
 1 <= n <= sz
 
  */
-public class Problem19 {
+public class Problem19_RemoveNthFromEnd {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         if (head.next == null) {
