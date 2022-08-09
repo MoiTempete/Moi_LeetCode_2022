@@ -22,5 +22,5 @@ Moi_LeetCode_2022
 |0028|[ImplementStrStr](Problem0028_ImplementStrStr.java)|
 |0300|[LongestIncreasingSubsequence](Problem0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](Problem9999_LongestCommonString.java)|
-|TOTAL|42 Problems Solved|
-|DATE|08/09/22|
+|Total|[42 Problems Solved]()|
+|Date|[08/09/22]()|

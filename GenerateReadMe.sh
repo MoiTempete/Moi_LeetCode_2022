@@ -15,6 +15,6 @@ for fileName in *.java; do
   count=$((count+2))
   echo "|""${id#*Problem}""|[""${desc%.*}""](""$fileName"")|" >> ../../../../../../"README.md"
 done
-echo "|TOTAL|""${count}"" Problems Solved""|" >> ../../../../../../"README.md"
-echo "|DATE|""$(date +%D)""|" >> ../../../../../../"README.md"
+echo "|Total|[""${count}"" Problems Solved""]()|" >> ../../../../../../"README.md"
+echo "|Date|[""$(date +%D)""]()|" >> ../../../../../../"README.md"
 
