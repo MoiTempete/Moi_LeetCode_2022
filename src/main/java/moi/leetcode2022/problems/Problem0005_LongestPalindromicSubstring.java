@@ -35,7 +35,7 @@ Constraints:
 1 <= s.length <= 1000
 s consist of only digits and English letters.
  */
-public class Problem5_LongestPalindromicSubstring {
+public class Problem0005_LongestPalindromicSubstring {
 
     public static String longestPalindrome(String s) {
         if (s == null || s.length() == 0) {

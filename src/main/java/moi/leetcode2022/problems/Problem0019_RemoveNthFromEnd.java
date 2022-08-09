@@ -45,7 +45,7 @@ The number of nodes in the list is sz.
 1 <= n <= sz
 
  */
-public class Problem19_RemoveNthFromEnd {
+public class Problem0019_RemoveNthFromEnd {
 
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         if (head.next == null) {

@@ -37,7 +37,7 @@ import java.util.Map;
  * Explanation: The answer is "wke", with the length of 3.
  * Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
-public class Problem3_LongestSubstringWithoutRepeatingCharacters {
+public class Problem0003_LongestSubstringWithoutRepeatingCharacters {
 
     public static int lengthOfLongestSubstring(String s) {
         return getLongestSubstring(s).length();

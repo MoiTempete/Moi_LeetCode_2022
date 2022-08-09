@@ -42,7 +42,7 @@ The number of nodes in both lists is in the range [0, 50].
 -100 <= Node.val <= 100
 Both list1 and list2 are sorted in non-decreasing order.
  */
-public class Problem21_MergeTwoSortedLists {
+public class Problem0021_MergeTwoSortedLists {
 
     static ListNode result;
     static ListNode node;

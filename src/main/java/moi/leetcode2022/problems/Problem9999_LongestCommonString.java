@@ -4,7 +4,7 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-public class ProblemCommonString {
+public class Problem9999_LongestCommonString {
 
     public static String longestCommonString(String[] strs) {
         if (strs == null || strs.length == 0) {

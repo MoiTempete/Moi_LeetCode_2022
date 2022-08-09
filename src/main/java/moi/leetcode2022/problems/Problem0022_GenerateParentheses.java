@@ -33,7 +33,7 @@ Constraints:
 
 1 <= n <= 8
  */
-public class Problem22_GenerateParentheses {
+public class Problem0022_GenerateParentheses {
 
     /* faster
     public static List<String> generateParenthesis(int n) {

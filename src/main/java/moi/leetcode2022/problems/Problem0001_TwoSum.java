@@ -51,7 +51,7 @@ import java.util.List;
  * <p>
  * Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
-public class Problem1_TwoSum {
+public class Problem0001_TwoSum {
     public static int[] twoSum(int[] nums, int target) {
         if (nums == null || nums.length <= 0) {
             return null;

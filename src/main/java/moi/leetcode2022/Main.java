@@ -1,9 +1,9 @@
 package moi.leetcode2022;
 
-import moi.leetcode2022.problems.Problem22_GenerateParentheses;
+import moi.leetcode2022.problems.Problem0026_RemoveDuplicatesFromSortedArray;
 
 public class Main {
     public static void main(String[] args) {
-        Problem22_GenerateParentheses.test();
+        Problem0026_RemoveDuplicatesFromSortedArray.test();
     }
 }

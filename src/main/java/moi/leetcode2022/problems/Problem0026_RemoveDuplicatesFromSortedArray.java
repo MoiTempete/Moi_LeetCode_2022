@@ -1,12 +1,9 @@
 package moi.leetcode2022.problems;
 
-import moi.leetcode2022.structure.ListNode;
-import moi.leetcode2022.utils.ListNodeUtil;
 import moi.leetcode2022.utils.Logger;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /*
@@ -55,7 +52,7 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
  */
-public class Problem26_RemoveDuplicatesFromSortedArray {
+public class Problem0026_RemoveDuplicatesFromSortedArray {
 
     public static int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {

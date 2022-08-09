@@ -30,7 +30,7 @@ Constraints:
 0 <= digits.length <= 4
 digits[i] is a digit in the range ['2', '9'].
  */
-public class Problem17_LetterCombinationsOfPhoneNumber {
+public class Problem0017_LetterCombinationsOfPhoneNumber {
 
     static HashMap<Character, String[]> letters = new HashMap<>() {
         {
