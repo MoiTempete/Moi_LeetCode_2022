@@ -7,13 +7,15 @@ echo "|Problem ID|Description|"
 echo "|:----------:|:-----------|"
 } >> "README.md"
 
-cd src/main/java/moi/leetcode2022/problems || exit
+filePath="src/main/java/moi/leetcode2022/problems/"
+cd $filePath || exit
+
 count=0
 for fileName in *.java; do
   id="${fileName%_*}"
   desc=${fileName#*_}
   count=$((count+2))
-  echo "|""${id#*Problem}""|[""${desc%.*}""](""$fileName"")|" >> ../../../../../../"README.md"
+  echo "|""${id#*Problem}""|[""${desc%.*}""](""$filePath""$fileName"")|" >> ../../../../../../"README.md"
 done
 echo "|Total|[""${count}"" Problems Solved""]()|" >> ../../../../../../"README.md"
 echo "|Date|[""$(date +%D)""]()|" >> ../../../../../../"README.md"
