@@ -4,7 +4,6 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /*
@@ -45,7 +44,7 @@ Constraints:
 1 <= haystack.length, needle.length <= 10^4
 haystack and needle consist of only lowercase English characters.
  */
-public class Problem28_ImplementStrStr {
+public class Problem0028_ImplementStrStr {
 
     public static int strStr(String haystack, String needle) {
         if (haystack == null || haystack.length() == 0) {
