@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/**
+/*
  * 1. Two Sum
  * Easy
  * <p>
@@ -51,7 +51,12 @@ import java.util.List;
  * <p>
  * Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
-public class Problem0001_TwoSum {
+public class P0001_TwoSum {
+
+    public static void main(String[] args) {
+        test();
+    }
+
     public static int[] twoSum(int[] nums, int target) {
         if (nums == null || nums.length <= 0) {
             return null;

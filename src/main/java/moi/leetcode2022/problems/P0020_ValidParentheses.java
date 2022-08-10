@@ -42,7 +42,11 @@ Constraints:
 1 <= s.length <= 10^4
 s consists of parentheses only '()[]{}'.
  */
-public class Problem0020_ValidParentheses {
+public class P0020_ValidParentheses {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static boolean isValid(String s) {
         if (s == null || s.length() < 2 || s.length() % 2 != 0) {

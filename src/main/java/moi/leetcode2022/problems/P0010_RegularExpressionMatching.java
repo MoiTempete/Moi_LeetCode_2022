@@ -50,7 +50,11 @@ s contains only lowercase English letters.
 p contains only lowercase English letters, '.', and '*'.
 It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
  */
-public class Problem0010_RegularExpressionMatching {
+public class P0010_RegularExpressionMatching {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static boolean isMatch(String s, String p) {
         return s.matches(p);
@@ -59,7 +63,7 @@ public class Problem0010_RegularExpressionMatching {
     public static String[] getSplitResultWithRegex(String str, char[] patterns) {
         StringBuilder result = new StringBuilder();
         byte[] bytes = str.getBytes();
-        boolean matched = false;
+        boolean matched;
         boolean lastMatched = false;
         for (byte letter : bytes) {
             matched = false;

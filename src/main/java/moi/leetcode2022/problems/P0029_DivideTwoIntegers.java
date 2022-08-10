@@ -44,7 +44,11 @@ Constraints:
 -2^31 <= dividend, divisor <= 2^31 - 1
 divisor != 0
  */
-public class Problem0029_DivideTwoIntegers {
+public class P0029_DivideTwoIntegers {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     /*
     bad way

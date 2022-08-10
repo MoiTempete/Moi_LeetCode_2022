@@ -4,7 +4,11 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-public class Problem9999_LongestCommonString {
+public class P9999_LongestCommonString {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static String longestCommonString(String[] strs) {
         if (strs == null || strs.length == 0) {
@@ -20,7 +24,7 @@ public class Problem9999_LongestCommonString {
         Arrays.fill(indexes, -1);
         int i = shortestString.length() - 1;
         int offset = 0;
-        int index = -1;
+        int index;
         StringBuilder result = new StringBuilder();
         char letter;
         int findOutCount = 0;

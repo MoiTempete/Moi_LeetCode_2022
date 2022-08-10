@@ -54,7 +54,11 @@ import java.util.*;
  * lists[i] is sorted in ascending order.
  * The sum of lists[i].length will not exceed 10^4.
  */
-public class Problem0023_MergeKSortedLists {
+public class P0023_MergeKSortedLists {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     static ListNode result;
     static ListNode node;

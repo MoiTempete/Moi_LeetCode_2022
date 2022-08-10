@@ -7,7 +7,7 @@ touch README.md
   echo "|:----------:|:-----------|"
 } >>"README.md"
 
-filePath="src/main/java/moi/leetcode2022/problems/"
+filePath="src/main/java/moi/leetcode2022/problems"
 upPath="../../../../../../"
 
 cd $filePath || exit
@@ -17,7 +17,7 @@ for fileName in *.java; do
   id="${fileName%_*}"
   desc=${fileName#*_}
   count=$((count + 1))
-  echo "|""${id#*Problem}""|[""${desc%.*}""](""$filePath""$fileName"")|" >>"$upPath""README.md"
+  echo "|""${id#*P}""|[""${desc%.*}""](""$filePath""/""$fileName"")|" >>"$upPath""README.md"
 done
 echo "|Total|[""${count}"" Problems Solved""](""$filePath"")|" >>"$upPath""README.md"
 echo "|Date|[""$(date +%D)""](""$filePath"")|" >>"$upPath""README.md"

@@ -4,7 +4,7 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-/**
+/*
 5. Longest Palindromic Substring
 Medium
 
@@ -35,7 +35,11 @@ Constraints:
 1 <= s.length <= 1000
 s consist of only digits and English letters.
  */
-public class Problem0005_LongestPalindromicSubstring {
+public class P0005_LongestPalindromicSubstring {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static String longestPalindrome(String s) {
         if (s == null || s.length() == 0) {

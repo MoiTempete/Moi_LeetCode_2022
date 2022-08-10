@@ -44,7 +44,11 @@ Constraints:
 1 <= haystack.length, needle.length <= 10^4
 haystack and needle consist of only lowercase English characters.
  */
-public class Problem0028_ImplementStrStr {
+public class P0028_ImplementStrStr {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static int strStr(String haystack, String needle) {
         if (haystack == null || haystack.length() == 0) {

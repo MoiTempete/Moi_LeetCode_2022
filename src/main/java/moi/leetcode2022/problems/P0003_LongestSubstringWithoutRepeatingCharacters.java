@@ -5,7 +5,7 @@ import moi.leetcode2022.utils.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+/*
  * 3. Longest Substring Without Repeating Characters
  * Medium
  *
@@ -37,7 +37,11 @@ import java.util.Map;
  * Explanation: The answer is "wke", with the length of 3.
  * Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
-public class Problem0003_LongestSubstringWithoutRepeatingCharacters {
+public class P0003_LongestSubstringWithoutRepeatingCharacters {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static int lengthOfLongestSubstring(String s) {
         return getLongestSubstring(s).length();

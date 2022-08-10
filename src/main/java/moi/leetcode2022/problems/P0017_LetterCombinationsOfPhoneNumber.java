@@ -30,7 +30,11 @@ Constraints:
 0 <= digits.length <= 4
 digits[i] is a digit in the range ['2', '9'].
  */
-public class Problem0017_LetterCombinationsOfPhoneNumber {
+public class P0017_LetterCombinationsOfPhoneNumber {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     static HashMap<Character, String[]> letters = new HashMap<>() {
         {
@@ -55,10 +59,6 @@ public class Problem0017_LetterCombinationsOfPhoneNumber {
         for (String letter : letters.get(digits.charAt(0))) {
             result.append(letter);
             result.append(",");
-        }
-
-        if (digits.length() == 0) {
-            return Arrays.asList(result.toString().split(","));
         }
 
         for (int i = 1; i < digits.length(); i++) {
@@ -107,8 +107,8 @@ public class Problem0017_LetterCombinationsOfPhoneNumber {
 
     public static void test() {
         Map<String, List<String>> cases = new HashMap<>();
-//        cases.put("23", Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"));
-//        cases.put("2", Arrays.asList("a", "b", "c"));
+        cases.put("23", Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"));
+        cases.put("2", Arrays.asList("a", "b", "c"));
         cases.put("234", Arrays.asList("adg","adh","adi","aeg","aeh","aei","afg","afh","afi","bdg","bdh","bdi","beg","beh","bei","bfg","bfh","bfi","cdg","cdh","cdi","ceg","ceh","cei","cfg","cfh","cfi"));
 
         for (Map.Entry<String, List<String>> entry : cases.entrySet()) {

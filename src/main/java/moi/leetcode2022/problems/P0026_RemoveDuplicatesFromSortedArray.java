@@ -52,7 +52,11 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
  */
-public class Problem0026_RemoveDuplicatesFromSortedArray {
+public class P0026_RemoveDuplicatesFromSortedArray {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static int removeDuplicates(int[] nums) {
         if (nums == null || nums.length == 0) {

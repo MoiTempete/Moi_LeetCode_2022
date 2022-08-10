@@ -4,7 +4,7 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-/**
+/*
  * 4. Median of Two Sorted Arrays
  * Hard
  * <p>
@@ -42,7 +42,11 @@ import java.util.*;
  * 1 <= m + n <= 2000
  * -10^6 <= nums1[i], nums2[i] <= 10^6
  */
-public class Problem0004_MedianOfTwoSortedArrays {
+public class P0004_MedianOfTwoSortedArrays {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1 == null ? 0 : nums1.length;

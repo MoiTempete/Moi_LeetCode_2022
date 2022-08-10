@@ -42,7 +42,11 @@ Constraints:
 -10^4 <= nums[i] <= 10^4
 
  */
-public class Problem0300_LongestIncreasingSubsequence {
+public class P0300_LongestIncreasingSubsequence {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static int lengthOfLIS(int[] nums) {
         ArrayList<Integer> lis = new ArrayList<>();

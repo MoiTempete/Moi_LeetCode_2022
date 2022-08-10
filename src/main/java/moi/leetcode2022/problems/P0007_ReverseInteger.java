@@ -5,7 +5,7 @@ import moi.leetcode2022.utils.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+/*
  * 7. Reverse Integer
  * Medium
  * <p>
@@ -40,7 +40,11 @@ import java.util.Map;
  * <p>
  * -2^31 <= x <= 2^31 - 1
  */
-public class Problem0007_ReverseInteger {
+public class P0007_ReverseInteger {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static int reverse(int x) {
         int result = 0;

@@ -6,7 +6,7 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-/**
+/*
  * 2. Add Two Numbers
  * Medium
  * <p>
@@ -44,12 +44,12 @@ import java.util.*;
  * The number of nodes in each linked list is in the range [1, 100].
  * 0 <= Node.val <= 9
  * It is guaranteed that the list represents a number that does not have leading zeros.
- * Accepted
- * 2,958,722
- * Submissions
- * 7,554,462
  */
-public class Problem0002_AddTwoNumbers {
+public class P0002_AddTwoNumbers {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return addTwoNumbers(l1, l2, 0);

@@ -4,8 +4,11 @@ import moi.leetcode2022.utils.Logger;
 
 import java.util.*;
 
-public class Problem0014_LongestCommonPrefix {
+public class P0014_LongestCommonPrefix {
 
+    public static void main(String[] args) {
+        test();
+    }
 
     public static String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {

@@ -33,7 +33,11 @@ Constraints:
 
 1 <= n <= 8
  */
-public class Problem0022_GenerateParentheses {
+public class P0022_GenerateParentheses {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     /* faster
     public static List<String> generateParenthesis(int n) {
@@ -104,7 +108,7 @@ public class Problem0022_GenerateParentheses {
         indexes.add(maxBinary.toString());
         Logger.i("maxBinary=" + maxBinary + ", minBinary=" + minBinary);
 
-        String binary = "";
+        String binary;
         for (int j = min + 2; j <= max - 2; j = j + 2) {
             binary = Integer.toBinaryString(j);
             if (checkBinaryIndex(binary)) {

@@ -48,7 +48,11 @@ Constraints:
 3 <= nums.length <= 3000
 -10^5 <= nums[i] <= 10^5
  */
-public class Problem0015_ThreeSum {
+public class P0015_ThreeSum {
+
+    public static void main(String[] args) {
+        test();
+    }
 
     static int max = 0;
 

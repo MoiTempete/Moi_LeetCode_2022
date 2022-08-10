@@ -1,9 +1,9 @@
 package moi.leetcode2022;
 
-import moi.leetcode2022.problems.Problem0026_RemoveDuplicatesFromSortedArray;
+import moi.leetcode2022.problems.P0029_DivideTwoIntegers;
 
 public class Main {
     public static void main(String[] args) {
-        Problem0026_RemoveDuplicatesFromSortedArray.test();
+        P0029_DivideTwoIntegers.test();
     }
 }
