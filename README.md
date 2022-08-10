@@ -21,7 +21,8 @@ Moi_LeetCode_2022
 |0026|[RemoveDuplicatesFromSortedArray](src/main/java/moi/leetcode2022/problems/P0026_RemoveDuplicatesFromSortedArray.java)|
 |0028|[ImplementStrStr](src/main/java/moi/leetcode2022/problems/P0028_ImplementStrStr.java)|
 |0029|[DivideTwoIntegers](src/main/java/moi/leetcode2022/problems/P0029_DivideTwoIntegers.java)|
+|0033|[SearchInRotatedSortedArray](src/main/java/moi/leetcode2022/problems/P0033_SearchInRotatedSortedArray.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[22 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[23 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/10/22](src/main/java/moi/leetcode2022/problems)|
