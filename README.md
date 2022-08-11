@@ -23,7 +23,10 @@ Moi_LeetCode_2022
 |0029|[DivideTwoIntegers](src/main/java/moi/leetcode2022/problems/P0029_DivideTwoIntegers.java)|
 |0033|[SearchInRotatedSortedArray](src/main/java/moi/leetcode2022/problems/P0033_SearchInRotatedSortedArray.java)|
 |0034|[FindFirstAndLastPosition](src/main/java/moi/leetcode2022/problems/P0034_FindFirstAndLastPosition.java)|
+|0036|[ValidSudoku](src/main/java/moi/leetcode2022/problems/P0036_ValidSudoku.java)|
+|0038|[CountAndSay](src/main/java/moi/leetcode2022/problems/P0038_CountAndSay.java)|
+|0041|[FirstMissingPositive](src/main/java/moi/leetcode2022/problems/P0041_FirstMissingPositive.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[24 Problems Solved](src/main/java/moi/leetcode2022/problems)|
-|Date|[08/10/22](src/main/java/moi/leetcode2022/problems)|
+|Total|[27 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Date|[08/11/22](src/main/java/moi/leetcode2022/problems)|

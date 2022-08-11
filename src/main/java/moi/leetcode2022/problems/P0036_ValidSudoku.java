@@ -2,7 +2,6 @@ package moi.leetcode2022.problems;
 
 import moi.leetcode2022.utils.Logger;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /*
@@ -75,11 +74,8 @@ public class P0036_ValidSudoku {
         Logger.i("is valid sudoku = " + isValid);
     }
 
-    static HashMap<String, String> rouMap = new HashMap<>();
-    static HashMap<String, String> columnMap = new HashMap<>();
-    static HashMap<String, String> boxMap = new HashMap<>();
-
     public static boolean isValidSudoku(char[][] board) {
+        HashMap<String, String> map = new HashMap<>();
         boolean rowUnique;
         boolean columnUnique;
         boolean boxUnique;
@@ -99,17 +95,17 @@ public class P0036_ValidSudoku {
                 boxIndex = "box" + row / 3 + column / 3 + ":" + var;
                 Logger.i("rowIndex=" + rowIndex + ", columnIndex=" + columnIndex + ", boxIndex=" + boxIndex);
 
-                rowUnique = !rouMap.containsKey(rowIndex);
-                columnUnique = !columnMap.containsKey(columnIndex);
-                boxUnique = !boxMap.containsKey(boxIndex);
+                rowUnique = !map.containsKey(rowIndex);
+                columnUnique = !map.containsKey(columnIndex);
+                boxUnique = !map.containsKey(boxIndex);
 
                 Logger.i("rowUnique=" + rowUnique + ", columnUnique=" + columnUnique + ", boxUnique=" + boxUnique);
                 if (!rowUnique || !columnUnique || !boxUnique) {
                     return false;
                 }
-                rouMap.put(rowIndex, var);
-                columnMap.put(columnIndex, var);
-                boxMap.put(boxIndex, var);
+                map.put(rowIndex, var);
+                map.put(columnIndex, var);
+                map.put(boxIndex, var);
             }
         }
 
