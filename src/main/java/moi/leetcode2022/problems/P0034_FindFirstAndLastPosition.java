@@ -65,7 +65,7 @@ public class P0034_FindFirstAndLastPosition {
             index = binarySearch(nums, target, low, high);
             if (index >= 0) {
                 result[0] = index;
-                if (result[1] == -1) {
+                if (result[1] == -1) { // right edge >= index
                     result[1] = index;
                 }
                 high = index - 1;
@@ -74,7 +74,7 @@ public class P0034_FindFirstAndLastPosition {
             }
         }
         //for right edge
-        low = result[1] + 1;
+        low = result[1] + 1; //ignore the left part
         high = nums.length - 1;
         while (low <= high) {
             index = binarySearch(nums, target, low, high);
