@@ -7,6 +7,7 @@ Moi_LeetCode_2022
 |0004|[MedianOfTwoSortedArrays](src/main/java/moi/leetcode2022/problems/P0004_MedianOfTwoSortedArrays.java)|
 |0005|[LongestPalindromicSubstring](src/main/java/moi/leetcode2022/problems/P0005_LongestPalindromicSubstring.java)|
 |0007|[ReverseInteger](src/main/java/moi/leetcode2022/problems/P0007_ReverseInteger.java)|
+|0008|[StringToInteger](src/main/java/moi/leetcode2022/problems/P0008_StringToInteger.java)|
 |0010|[RegularExpressionMatching](src/main/java/moi/leetcode2022/problems/P0010_RegularExpressionMatching.java)|
 |0011|[ContainerWithMostWater](src/main/java/moi/leetcode2022/problems/P0011_ContainerWithMostWater.java)|
 |0013|[RomanToInteger](src/main/java/moi/leetcode2022/problems/P0013_RomanToInteger.java)|
@@ -28,5 +29,5 @@ Moi_LeetCode_2022
 |0041|[FirstMissingPositive](src/main/java/moi/leetcode2022/problems/P0041_FirstMissingPositive.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[27 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[28 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/11/22](src/main/java/moi/leetcode2022/problems)|
