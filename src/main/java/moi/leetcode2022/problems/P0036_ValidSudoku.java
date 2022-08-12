@@ -3,6 +3,7 @@ package moi.leetcode2022.problems;
 import moi.leetcode2022.utils.Logger;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 /*
 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
@@ -75,7 +76,7 @@ public class P0036_ValidSudoku {
     }
 
     public static boolean isValidSudoku(char[][] board) {
-        HashMap<String, String> map = new HashMap<>();
+        HashSet<String> set = new HashSet<>();
         boolean rowUnique;
         boolean columnUnique;
         boolean boxUnique;
@@ -95,17 +96,14 @@ public class P0036_ValidSudoku {
                 boxIndex = "box" + row / 3 + column / 3 + ":" + var;
                 Logger.i("rowIndex=" + rowIndex + ", columnIndex=" + columnIndex + ", boxIndex=" + boxIndex);
 
-                rowUnique = !map.containsKey(rowIndex);
-                columnUnique = !map.containsKey(columnIndex);
-                boxUnique = !map.containsKey(boxIndex);
+                rowUnique = set.add(rowIndex);
+                columnUnique = set.add(columnIndex);
+                boxUnique = set.add(boxIndex);
 
                 Logger.i("rowUnique=" + rowUnique + ", columnUnique=" + columnUnique + ", boxUnique=" + boxUnique);
                 if (!rowUnique || !columnUnique || !boxUnique) {
                     return false;
                 }
-                map.put(rowIndex, var);
-                map.put(columnIndex, var);
-                map.put(boxIndex, var);
             }
         }
 
