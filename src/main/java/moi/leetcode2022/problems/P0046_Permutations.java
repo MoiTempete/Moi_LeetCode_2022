@@ -63,6 +63,10 @@ public class P0046_Permutations {
                 resultList.add(temp);
                 continue;
             }
+            /*
+             * Permutations P(n) for array = insert array[n-1] into every available space in P(n-1)
+             * So, we first generate P(1), and we insert elements to get P(next) by loop in input arrays to find next element
+             */
             for (List<Integer> result : resultList) {
                 for (int k = 0; k <= result.size(); k++) {
                     temp = new ArrayList<>(result);

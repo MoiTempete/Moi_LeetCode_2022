@@ -2,7 +2,9 @@ package moi.leetcode2022.utils;
 
 import moi.leetcode2022.structure.ListNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ListNodeUtil {
     public static ListNode toListNode(int[] array) {
@@ -20,7 +22,22 @@ public class ListNodeUtil {
             last.next = new ListNode(array[i]);
             last = last.next;
         }
+
         return result;
+    }
+
+    public static ListNode of(String str) {
+        return toListNode(ArrayUtil.of(str));
+    }
+
+    public static ListNode[] of2(String str) {
+        int[][] array2 = ArrayUtil.of2(str);
+        ListNode[] listNodes = new ListNode[array2.length];
+        for (int i = 0; i < array2.length; i++) {
+            listNodes[i] = toListNode(array2[i]);
+        }
+
+        return listNodes;
     }
 
     public static ListNode toListNode(ArrayList<Integer> array) {
@@ -38,6 +55,7 @@ public class ListNodeUtil {
             last.next = new ListNode(array.get(i));
             last = last.next;
         }
+
         return result;
     }
 
@@ -54,6 +72,7 @@ public class ListNodeUtil {
 
     public static int[] toArray(ListNode node) {
         ArrayList<Integer> arrayList =  toArrayList(node);
+
         return Arrays.stream(arrayList.toArray(new Integer[0])).mapToInt(Integer::intValue).toArray();
     }
 
@@ -65,15 +84,15 @@ public class ListNodeUtil {
         for (int i = 0; i < list.size(); i++) {
             listNodes[i] = toListNode(list.get(i));
         }
+
         return listNodes;
     }
-
-
 
     public static boolean isEqual(ListNode node, ListNode nodeCompare) {
         if (node == null || node.toString().equals("[0]")) {
             return nodeCompare == null || nodeCompare.toString().equals("[0]");
         }
+
         return node.toString().equals(nodeCompare.toString());
     }
 }
