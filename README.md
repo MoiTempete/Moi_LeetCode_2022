@@ -3,8 +3,7 @@ Moi_LeetCode_2022
 |:----------:|:-----------|
 |0001|[TwoSum](src/main/java/moi/leetcode2022/problems/P0001_TwoSum.java)|
 |0002|[AddTwoNumbers](src/main/java/moi/leetcode2022/problems/P0002_AddTwoNumbers.java)|
-|0003|[LongestSubstringWithoutRepeatingCharacters](src/main/java/moi/leetcode2022/problems/P0003_LongestSubstringWithoutRepeatingCharacters.java)
-|
+|0003|[LongestSubstringWithoutRepeatingCharacters](src/main/java/moi/leetcode2022/problems/P0003_LongestSubstringWithoutRepeatingCharacters.java)|
 |0004|[MedianOfTwoSortedArrays](src/main/java/moi/leetcode2022/problems/P0004_MedianOfTwoSortedArrays.java)|
 |0005|[LongestPalindromicSubstring](src/main/java/moi/leetcode2022/problems/P0005_LongestPalindromicSubstring.java)|
 |0007|[ReverseInteger](src/main/java/moi/leetcode2022/problems/P0007_ReverseInteger.java)|
@@ -14,15 +13,13 @@ Moi_LeetCode_2022
 |0013|[RomanToInteger](src/main/java/moi/leetcode2022/problems/P0013_RomanToInteger.java)|
 |0014|[LongestCommonPrefix](src/main/java/moi/leetcode2022/problems/P0014_LongestCommonPrefix.java)|
 |0015|[ThreeSum](src/main/java/moi/leetcode2022/problems/P0015_ThreeSum.java)|
-|0017|[LetterCombinationsOfPhoneNumber](src/main/java/moi/leetcode2022/problems/P0017_LetterCombinationsOfPhoneNumber.java)
-|
+|0017|[LetterCombinationsOfPhoneNumber](src/main/java/moi/leetcode2022/problems/P0017_LetterCombinationsOfPhoneNumber.java)|
 |0019|[RemoveNthFromEnd](src/main/java/moi/leetcode2022/problems/P0019_RemoveNthFromEnd.java)|
 |0020|[ValidParentheses](src/main/java/moi/leetcode2022/problems/P0020_ValidParentheses.java)|
 |0021|[MergeTwoSortedLists](src/main/java/moi/leetcode2022/problems/P0021_MergeTwoSortedLists.java)|
 |0022|[GenerateParentheses](src/main/java/moi/leetcode2022/problems/P0022_GenerateParentheses.java)|
 |0023|[MergeKSortedLists](src/main/java/moi/leetcode2022/problems/P0023_MergeKSortedLists.java)|
-|0026|[RemoveDuplicatesFromSortedArray](src/main/java/moi/leetcode2022/problems/P0026_RemoveDuplicatesFromSortedArray.java)
-|
+|0026|[RemoveDuplicatesFromSortedArray](src/main/java/moi/leetcode2022/problems/P0026_RemoveDuplicatesFromSortedArray.java)|
 |0028|[ImplementStrStr](src/main/java/moi/leetcode2022/problems/P0028_ImplementStrStr.java)|
 |0029|[DivideTwoIntegers](src/main/java/moi/leetcode2022/problems/P0029_DivideTwoIntegers.java)|
 |0033|[SearchInRotatedSortedArray](src/main/java/moi/leetcode2022/problems/P0033_SearchInRotatedSortedArray.java)|
