@@ -29,7 +29,8 @@ Moi_LeetCode_2022
 |0041|[FirstMissingPositive](src/main/java/moi/leetcode2022/problems/P0041_FirstMissingPositive.java)|
 |0046|[Permutations](src/main/java/moi/leetcode2022/problems/P0046_Permutations.java)|
 |0048|[RotateImage](src/main/java/moi/leetcode2022/problems/P0048_RotateImage.java)|
+|0049|[GroupAnagrams](src/main/java/moi/leetcode2022/problems/P0049_GroupAnagrams.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[30 Problems Solved](src/main/java/moi/leetcode2022/problems)|
-|Date|[08/12/22](src/main/java/moi/leetcode2022/problems)|
+|Total|[31 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Date|[08/15/22](src/main/java/moi/leetcode2022/problems)|
