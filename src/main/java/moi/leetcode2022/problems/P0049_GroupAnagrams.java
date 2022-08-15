@@ -47,7 +47,7 @@ public class P0049_GroupAnagrams {
             int[] referenceIndex = new int[26];
             byte[] bytes = words.getBytes();
             for (byte aByte : bytes) {
-                referenceIndex[aByte - 97]++;
+                referenceIndex[aByte - 97]++; //a=97
             }
             List<Integer> indexList = Arrays.stream(referenceIndex).boxed().toList();
             if (anagramsList.containsKey(indexList)) {
