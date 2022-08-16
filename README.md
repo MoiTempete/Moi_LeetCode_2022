@@ -33,7 +33,8 @@ Moi_LeetCode_2022
 |0050|[PowXN](src/main/java/moi/leetcode2022/problems/P0050_PowXN.java)|
 |0053|[MaximumSubarray](src/main/java/moi/leetcode2022/problems/P0053_MaximumSubarray.java)|
 |0054|[SpiralMatrix](src/main/java/moi/leetcode2022/problems/P0054_SpiralMatrix.java)|
+|0055|[JumpGame](src/main/java/moi/leetcode2022/problems/P0055_JumpGame.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[34 Problems Solved](src/main/java/moi/leetcode2022/problems)|
-|Date|[08/15/22](src/main/java/moi/leetcode2022/problems)|
+|Total|[35 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Date|[08/16/22](src/main/java/moi/leetcode2022/problems)|
