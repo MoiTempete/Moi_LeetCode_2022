@@ -40,7 +40,8 @@ Moi_LeetCode_2022
 |0069|[SqrtX](src/main/java/moi/leetcode2022/problems/P0069_SqrtX.java)|
 |0070|[ClimbingStairs](src/main/java/moi/leetcode2022/problems/P0070_ClimbingStairs.java)|
 |0073|[SetMatrixZeroes](src/main/java/moi/leetcode2022/problems/P0073_SetMatrixZeroes.java)|
+|0075|[SortColors](src/main/java/moi/leetcode2022/problems/P0075_SortColors.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[41 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[42 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/17/22](src/main/java/moi/leetcode2022/problems)|
