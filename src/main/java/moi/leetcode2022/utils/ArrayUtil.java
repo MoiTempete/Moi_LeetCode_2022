@@ -23,7 +23,11 @@ public class ArrayUtil {
         str = str.substring(1, str.length() - 1);
         List<int[]> arrayList = new ArrayList<>();
         for (String var : str.split("],\\[")) {
-            arrayList.add(of(var));
+            if (var.trim().length() == 0) {
+                arrayList.add(new int[]{});
+            } else {
+                arrayList.add(of(var));
+            }
         }
 
         return arrayList.toArray(new int[arrayList.size()][arrayList.get(0).length]);
@@ -33,7 +37,11 @@ public class ArrayUtil {
         str = str.substring(1, str.length() - 1);
         List<List<Integer>> arrayList = new ArrayList<>();
         for (String var : str.split("],\\[")) {
-            arrayList.add(ofList(var));
+            if (var.trim().length() == 0) {
+                arrayList.add(new ArrayList<>());
+            } else {
+                arrayList.add(ofList(var));
+            }
         }
 
         return arrayList;
@@ -50,5 +58,16 @@ public class ArrayUtil {
         }
 
         return arrayList;
+    }
+
+    public static List<List<Integer>> ofList2(int[][] array) {
+        if (array == null || array.length == 0 || array[0].length == 0) {
+            return new ArrayList<>();
+        }
+        List<List<Integer>> result = new ArrayList<>();
+        for (int[] ints : array) {
+            result.add(ofList(ints));
+        }
+        return result;
     }
 }
