@@ -9,6 +9,17 @@ public class ArrayUtil {
         return ofList(str).stream().mapToInt(Integer::valueOf).toArray();
     }
 
+    public static char[] ofChar(String str) {
+        str = str.replaceAll("\\[|\\]", "");
+        String[] splitResult = str.split(",");
+        char[] result = new char[splitResult.length];
+        for (int i = 0; i < splitResult.length; i++) {
+            result[i] = splitResult[i].charAt(0);
+        }
+
+        return result;
+    }
+
     public static List<Integer> ofList(String str) {
         str = str.replaceAll("\\[|\\]", "");
         List<Integer> arrayList = new ArrayList<>();
@@ -45,6 +56,20 @@ public class ArrayUtil {
         }
 
         return arrayList;
+    }
+
+    public static char[][] ofChar2(String str) {
+        str = str.substring(1, str.length() - 1);
+        List<char[]> arrayList = new ArrayList<>();
+        for (String var : str.split("],\\[")) {
+            if (var.trim().length() == 0) {
+                arrayList.add(new char[]{});
+            } else {
+                arrayList.add(ofChar(var));
+            }
+        }
+
+        return arrayList.toArray(new char[arrayList.size()][arrayList.get(0).length]);
     }
 
     public static int[] of(int... nums) {
