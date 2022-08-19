@@ -83,21 +83,15 @@ public class P0088_MergeSortedArray {
         int temp;
         int tailCount = 0;
 
-        Logger.i("nums1=" + Arrays.toString(nums1) + ", nums2=" + Arrays.toString(nums2));
         while (dstIndex < m + n && srcIndex < n) {
-            Logger.i("dstIndex=" + dstIndex + ", srcIndex=" + srcIndex);
             if (dstIndex > m - 1 && nums1[dstIndex] == 0) {
                 nums1[dstIndex] = nums2[srcIndex];
                 srcIndex++;
-                Logger.i("at tail of nums1 with only 0");
-                Logger.i("nums1=" + Arrays.toString(nums1) + ", nums2=" + Arrays.toString(nums2));
                 continue;
             }
             if (nums1[dstIndex] <= nums2[srcIndex]) {
                 dstIndex++;
-                Logger.i("nums1[dstIndex] <= nums2[srcIndex]");
             } else {
-                Logger.i("nums1[dstIndex] > nums2[srcIndex]");
                 temp = nums1[dstIndex];
                 nums1[dstIndex] = nums2[srcIndex];
                 nums2[srcIndex] = temp;
@@ -110,7 +104,6 @@ public class P0088_MergeSortedArray {
                 dstIndex++;
                 srcIndex++;
             }
-            Logger.i("nums1=" + Arrays.toString(nums1) + ", nums2=" + Arrays.toString(nums2));
         }
     }
 
