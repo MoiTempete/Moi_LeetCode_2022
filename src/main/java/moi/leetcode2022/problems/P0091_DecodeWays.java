@@ -60,8 +60,6 @@ public class P0091_DecodeWays {
         test();
     }
 
-    static int count;
-
     public static int numDecodings(String s) {
         int[] dp = new int[s.length() + 1];
         dp[s.length()] = 1;
