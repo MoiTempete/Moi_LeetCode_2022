@@ -1,5 +1,7 @@
 package moi.leetcode2022.structure;
 
+import moi.leetcode2022.utils.TreeNodeUtil;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -20,10 +22,6 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        if (left == null && right == null) {
-            return String.valueOf(this.val);
-        } else {
-            return this.val + ", " + this.left + ", " + this.right;
-        }
+        return TreeNodeUtil.ofList(this).toString();
     }
 }

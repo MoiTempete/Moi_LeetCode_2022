@@ -2,6 +2,9 @@ package moi.leetcode2022.utils;
 
 import moi.leetcode2022.structure.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TreeNodeUtil {
 
     public static TreeNode of(String str) {
@@ -28,5 +31,37 @@ public class TreeNodeUtil {
             node.right = nodes[2 * i + 1];
         }
         return nodes[1];
+    }
+
+    public static List<List<Integer>> ofList(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        int level = 0;
+        traversal(root, result, level);
+        return result;
+    }
+
+    public static void traversal(TreeNode node, List<List<Integer>> result, int level) {
+        if (node == null) {
+            return;
+        }
+        List<Integer> list = null;
+        if (result.size() != 0 && level < result.size()) {
+            list  = result.get(level);
+        }
+        if (list == null) {
+            list = new ArrayList<>();
+            list.add(node.val);
+            result.add(level, list);
+        } else {
+            list.add(node.val);
+            result.remove(level);
+            result.add(level, list);
+        }
+        if (node.left != null) {
+            traversal(node.left, result, level + 1);
+        }
+        if (node.right != null) {
+            traversal(node.right, result, level + 1);
+        }
     }
 }
