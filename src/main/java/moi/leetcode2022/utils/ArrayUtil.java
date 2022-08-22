@@ -24,7 +24,14 @@ public class ArrayUtil {
         str = str.replaceAll("\\[|\\]", "");
         List<Integer> arrayList = new ArrayList<>();
         for (String var : str.split(",")) {
-            arrayList.add(Integer.valueOf(var.trim()));
+            var = var.trim();
+            int number;
+            if ("null".equals(var)) {
+                number = Integer.MAX_VALUE;
+            } else {
+                number = Integer.parseInt(var);
+            }
+            arrayList.add(number);
         }
 
         return arrayList;

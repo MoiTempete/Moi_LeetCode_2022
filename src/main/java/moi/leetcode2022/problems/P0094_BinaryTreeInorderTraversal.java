@@ -3,6 +3,7 @@ package moi.leetcode2022.problems;
 import moi.leetcode2022.structure.TreeNode;
 import moi.leetcode2022.utils.ArrayUtil;
 import moi.leetcode2022.utils.Logger;
+import moi.leetcode2022.utils.TreeNodeUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,7 +63,7 @@ public class P0094_BinaryTreeInorderTraversal {
 
     public static void test() {
         Map<TreeNode, List<Integer>> cases = new HashMap<>();
-        cases.put(new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null)), ArrayUtil.ofList("[1,3,2]"));
+        cases.put(TreeNodeUtil.of("1,null,2,null,null,3,null"), ArrayUtil.ofList("[1,3,2]"));
 
         for (Map.Entry<TreeNode, List<Integer>> entry : cases.entrySet()) {
             TreeNode input = entry.getKey();
