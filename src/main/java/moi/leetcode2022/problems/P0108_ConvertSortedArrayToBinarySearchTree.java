@@ -42,11 +42,10 @@ public class P0108_ConvertSortedArrayToBinarySearchTree {
         if (nums == null || nums.length == 0) {
             return null;
         }
-        return generateTreeNodeFromArray(true, nums);
+        return generateTreeNodeFromArray(nums);
     }
 
-    public static TreeNode generateTreeNodeFromArray(boolean isLeft, int[] nums) {
-        Logger.i((isLeft ? "left=" : "right=") + Arrays.toString(nums));
+    public static TreeNode generateTreeNodeFromArray(int[] nums) {
         if (nums.length == 1) {
             return new TreeNode(nums[0]);
         }
@@ -58,8 +57,8 @@ public class P0108_ConvertSortedArrayToBinarySearchTree {
         }
         int middle = (nums.length - 1) / 2;
         TreeNode root = new TreeNode(nums[middle]);
-        root.left = generateTreeNodeFromArray(true, Arrays.copyOfRange(nums, 0, middle));
-        root.right = generateTreeNodeFromArray(false, Arrays.copyOfRange(nums, middle + 1, nums.length));
+        root.left = generateTreeNodeFromArray(Arrays.copyOfRange(nums, 0, middle));
+        root.right = generateTreeNodeFromArray(Arrays.copyOfRange(nums, middle + 1, nums.length));
         return root;
     }
 
