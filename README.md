@@ -57,8 +57,9 @@ Moi_LeetCode_2022
 |0116|[PopulatingNextRightPointersInEachNode](src/main/java/moi/leetcode2022/problems/P0116_PopulatingNextRightPointersInEachNode.java)|
 |0118|[PascalTriangle](src/main/java/moi/leetcode2022/problems/P0118_PascalTriangle.java)|
 |0119|[PascalTriangleII](src/main/java/moi/leetcode2022/problems/P0119_PascalTriangleII.java)|
+|0121|[BestTime2BuyAndSellStock](src/main/java/moi/leetcode2022/problems/P0121_BestTime2BuyAndSellStock.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |1338|[ReduceArraySizeHalf](src/main/java/moi/leetcode2022/problems/P1338_ReduceArraySizeHalf.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[59 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[60 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/23/22](src/main/java/moi/leetcode2022/problems)|
