@@ -54,8 +54,9 @@ Moi_LeetCode_2022
 |0103|[BinaryTreeZigzagLevelOrderTraversal](src/main/java/moi/leetcode2022/problems/P0103_BinaryTreeZigzagLevelOrderTraversal.java)|
 |0105|[ConstructBinaryTreeFromPreorderAndInorderTraversal](src/main/java/moi/leetcode2022/problems/P0105_ConstructBinaryTreeFromPreorderAndInorderTraversal.java)|
 |0108|[ConvertSortedArrayToBinarySearchTree](src/main/java/moi/leetcode2022/problems/P0108_ConvertSortedArrayToBinarySearchTree.java)|
+|0116|[PopulatingNextRightPointersInEachNode](src/main/java/moi/leetcode2022/problems/P0116_PopulatingNextRightPointersInEachNode.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |1338|[ReduceArraySizeHalf](src/main/java/moi/leetcode2022/problems/P1338_ReduceArraySizeHalf.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[56 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[57 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/23/22](src/main/java/moi/leetcode2022/problems)|
