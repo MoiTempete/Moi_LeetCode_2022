@@ -11,10 +11,10 @@ public class P0125_ValidPalindrome {
         test();
     }
 
-    static int lowerMin = 65;
-    static int lowerMax = 90;
-    static int upperMin = 97;
-    static int upperMax = 122;
+    static int upperMin = 65;
+    static int upperMax = 90;
+    static int lowerMin = 97;
+    static int lowerMax = 122;
 
     public static boolean isPalindrome(String s) {
         byte[] bytes = s.getBytes();
