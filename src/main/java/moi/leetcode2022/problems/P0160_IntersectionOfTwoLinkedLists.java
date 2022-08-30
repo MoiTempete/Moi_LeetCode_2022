@@ -100,7 +100,8 @@ public class P0160_IntersectionOfTwoLinkedLists {
 
     public static void test() {
         Map<ListNode[], ListNode> cases = new HashMap<>();
-        cases.put(new ListNode[]{ListNodeUtil.of("[4,2,8,4,5]"), ListNodeUtil.of("[5,6,1,8,4,5]")}, ListNodeUtil.of("8,4,5]"));
+        ListNode intersection = ListNodeUtil.of("[8,4,5]");
+        cases.put(new ListNode[]{new ListNode(4, new ListNode(1, intersection)), new ListNode(5, new ListNode(6, new ListNode(1, intersection)))}, intersection);
 
         for (Map.Entry<ListNode[], ListNode> entry : cases.entrySet()) {
             ListNode[] input = entry.getKey();
