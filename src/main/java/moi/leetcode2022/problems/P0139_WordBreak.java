@@ -46,7 +46,7 @@ public class P0139_WordBreak {
     }
 
     //DP
-    public boolean wordBreak2(String s, List<String> wordDict) {
+    public static boolean wordBreak2(String s, List<String> wordDict) {
         int n = s.length();
         // dp[i] means if subString[0, i-1] can be segmented into a space-separated sequence of one or more dictionary words.
         boolean[] dp = new boolean[n + 1];
@@ -126,7 +126,7 @@ public class P0139_WordBreak {
             List<String> input = entry.getKey();
             boolean expect = entry.getValue();
             Logger.i("input=" + input + ", except=" + expect);
-            boolean output = wordBreak(input.get(0), input.subList(1, input.size()));
+            boolean output = wordBreak2(input.get(0), input.subList(1, input.size()));
             if (output == expect) {
                 Logger.i("case pass by output=" + output);
             } else {
