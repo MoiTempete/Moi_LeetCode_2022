@@ -70,8 +70,9 @@ Moi_LeetCode_2022
 |0140|[WordBreakII](src/main/java/moi/leetcode2022/problems/P0140_WordBreakII.java)|
 |0141|[LinkedListCycle](src/main/java/moi/leetcode2022/problems/P0141_LinkedListCycle.java)|
 |0146|[LRUCache](src/main/java/moi/leetcode2022/problems/P0146_LRUCache.java)|
+|0148|[SortList](src/main/java/moi/leetcode2022/problems/P0148_SortList.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |1338|[ReduceArraySizeHalf](src/main/java/moi/leetcode2022/problems/P1338_ReduceArraySizeHalf.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[72 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[73 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/30/22](src/main/java/moi/leetcode2022/problems)|
