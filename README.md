@@ -73,8 +73,9 @@ Moi_LeetCode_2022
 |0148|[SortList](src/main/java/moi/leetcode2022/problems/P0148_SortList.java)|
 |0160|[IntersectionOfTwoLinkedLists](src/main/java/moi/leetcode2022/problems/P0160_IntersectionOfTwoLinkedLists.java)|
 |0169|[MajorityElement](src/main/java/moi/leetcode2022/problems/P0169_MajorityElement.java)|
+|0171|[ExcelSheetColumnNumber](src/main/java/moi/leetcode2022/problems/P0171_ExcelSheetColumnNumber.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |1338|[ReduceArraySizeHalf](src/main/java/moi/leetcode2022/problems/P1338_ReduceArraySizeHalf.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[75 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[76 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/31/22](src/main/java/moi/leetcode2022/problems)|
