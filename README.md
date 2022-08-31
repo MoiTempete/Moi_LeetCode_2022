@@ -77,8 +77,9 @@ Moi_LeetCode_2022
 |0190|[ReverseBits](src/main/java/moi/leetcode2022/problems/P0190_ReverseBits.java)|
 |0191|[NumberOfBits](src/main/java/moi/leetcode2022/problems/P0191_NumberOfBits.java)|
 |0202|[HappyNumber](src/main/java/moi/leetcode2022/problems/P0202_HappyNumber.java)|
+|0206|[ReverseLinkedList](src/main/java/moi/leetcode2022/problems/P0206_ReverseLinkedList.java)|
 |0300|[LongestIncreasingSubsequence](src/main/java/moi/leetcode2022/problems/P0300_LongestIncreasingSubsequence.java)|
 |1338|[ReduceArraySizeHalf](src/main/java/moi/leetcode2022/problems/P1338_ReduceArraySizeHalf.java)|
 |9999|[LongestCommonString](src/main/java/moi/leetcode2022/problems/P9999_LongestCommonString.java)|
-|Total|[79 Problems Solved](src/main/java/moi/leetcode2022/problems)|
+|Total|[80 Problems Solved](src/main/java/moi/leetcode2022/problems)|
 |Date|[08/31/22](src/main/java/moi/leetcode2022/problems)|

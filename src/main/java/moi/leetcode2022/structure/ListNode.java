@@ -25,4 +25,17 @@ public class ListNode {
         return val + (next != null ? ("," + next.nextToString()) : "]");
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof ListNode) {
+           if (this.val == ((ListNode) obj).val) {
+               if (this.next == null && ((ListNode) obj).next == null) {
+                   return true;
+               } else if (this.next != null && ((ListNode) obj).next != null){
+                   return this.next.equals(((ListNode) obj).next);
+               }
+           }
+        }
+        return false;
+    }
 }
